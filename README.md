@@ -9,6 +9,7 @@ A powerful web scraper that can extract content from websites and answer questio
 - 📋 **Content Summarization**: Generate summaries of website content
 - 🎯 **Structured Extraction**: Extract titles, headings, and paragraphs
 - 💬 **Interactive Mode**: Chat with the scraper in real-time
+- 🚀 **Streamlit Web App**: Beautiful web interface ready for hosting
 
 ## Installation
 
@@ -32,6 +33,46 @@ A powerful web scraper that can extract content from websites and answer questio
    ```
    
    You can get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+
+## 🚀 Streamlit Web App (Recommended)
+
+### Run Locally
+
+1. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Set up OpenAI API key** (create `.env` file or use sidebar in app):
+   ```
+   OPENAI_API_KEY=your_api_key_here
+   ```
+
+3. **Run Streamlit app**:
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+
+4. **Open your browser** to `http://localhost:8501`
+
+### Deploy to Streamlit Cloud
+
+1. **Push your code to GitHub** (already done ✅)
+
+2. **Go to [Streamlit Cloud](https://streamlit.io/cloud)**
+
+3. **Sign in with GitHub** and click "New app"
+
+4. **Select your repository**: `mashrifmahim443/web-scraper`
+
+5. **Set main file path**: `streamlit_app.py`
+
+6. **Add secrets** (click "Advanced settings"):
+   - Add secret: `OPENAI_API_KEY` with your API key value
+
+7. **Click "Deploy"** 🎉
+
+Your app will be live at: `https://your-app-name.streamlit.app`
 
 ## Usage
 
@@ -117,7 +158,11 @@ web-scrapper/
 ├── openai_qa.py        # OpenAI Q&A integration
 ├── main.py             # Main CLI script
 ├── interactive.py      # Interactive Q&A mode
+├── streamlit_app.py    # Streamlit web application
 ├── requirements.txt    # Python dependencies
+├── packages.txt        # System packages for Streamlit Cloud
+├── .streamlit/
+│   └── config.toml    # Streamlit configuration
 ├── .env.example        # Environment variables template
 └── README.md          # This file
 ```
@@ -135,6 +180,7 @@ web-scrapper/
 - `openai`: OpenAI API client
 - `python-dotenv`: Environment variable management
 - `lxml`: Fast XML/HTML parser
+- `streamlit`: Web framework for the interactive app
 
 ## Notes
 
